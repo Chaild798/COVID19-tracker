@@ -1,0 +1,57 @@
+<div class="row mt-5 mb-5">
+
+    <div class="col-md-4">
+        <h4>Confirmed Cases</h4>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-content-center"
+            *ngFor="let country of topConfirmed"
+            >
+                <div class="ms-2 me-auto"> <!--Margin start 2, se va para la derecha un toque y por el me-auto a topa a la izquierda-->
+                    <div class="fw-bold"><!--font-weight-->
+                        {{country.Country}}
+                    </div>
+                    <span class="badge bg-warning rounded-pill">
+                        {{country.TotalConfirmed | number}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        <h4>Confirmed Deaths</h4>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-content-center"
+            *ngFor="let country of topDeaths"
+            >
+                <div class="ms-2 me-auto"> <!--Margin start 2, se va para la derecha un toque y por el me-auto a topa a la izquierda-->
+                    <div class="fw-bold"><!--font-weight-->
+                        {{country.Country}}
+                    </div>
+                    <span class="badge bg-danger rounded-pill">
+                        {{country.TotalDeaths | number}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        <h4>Confirmed Recovered</h4>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-content-center"
+            *ngFor="let country of topRecovered"
+            >
+                <div class="ms-2 me-auto"> <!--Margin start 2, se va para la derecha un toque y por el me-auto a topa a la izquierda-->
+                    <div class="fw-bold"><!--font-weight-->
+                        {{country.Country}}
+                    </div>
+                    <span class="badge bg-success rounded-pill">
+                        {{country.TotalRecovered | number}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>

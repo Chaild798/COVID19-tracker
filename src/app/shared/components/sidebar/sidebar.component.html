@@ -1,0 +1,24 @@
+<nav class="sidebar">
+
+    <div class="logo">
+        <a href="#">
+            <img src="../../../../favicon.ico"/>
+        </a>
+    </div>
+
+    <div class="navigation">
+        <ul class="list-unstyled"> <!--remueve los estilos BS--> 
+            <li [routerLink]="'summary'" routerLinkActive="active">
+                <a >Summary</a>
+            </li>
+            <li [routerLink]="'country'" routerLinkActive="active">
+                <a>By Country</a>
+            </li>
+            <li [routerLink]="'live'" routerLinkActive="active">
+                <a>Live</a>
+            </li>
+            <!--si esta actie, se le pasa la clase .active, utilizado con li.active en el css-->
+        </ul>
+    </div>
+
+</nav>
